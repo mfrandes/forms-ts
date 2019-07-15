@@ -14,6 +14,21 @@ genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+   /* this.signupForm.setValue({
+      userData: {
+        username: suggestedName,
+        email: ''
+      },
+      secret: 'pet',
+      questionAnswer: '',
+      gender: 'male'
+    }) */ // this is a leser aproach that changes all input next better aproach that changes only what we want.
+      this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      },
+      gender: 'male'
+    })
   }
  // onSubmit(form: NgForm){
  //   console.log(form);
